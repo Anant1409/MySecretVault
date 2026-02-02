@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+  <meta charset="UTF-8">
+  <title>Shadow Vault</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN GATE -->
+<div id="gate" class="gate">
+  <h1>SHADOW VAULT</h1>
+  <p>Authorized Souls Only</p>
+
+  <input type="text" id="username" placeholder="Secret Key">
+  <input type="password" id="password" placeholder="Access Code">
+  <button onclick="login()">ENTER</button>
+
+  <p id="error"></p>
+</div>
+
+<!-- VAULT -->
+<div id="vault" class="vault hidden">
+  <h2>🕯 Message Wall</h2>
+  <div id="wall" class="wall"></div>
+
+  <h2>🖤 Confession Box</h2>
+  <textarea id="confession" placeholder="Whisper to the shadows..."></textarea>
+  <button onclick="sendMessage()">Send to Shadow</button>
+
+  <button class="logout" onclick="logout()">Exit Vault</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
